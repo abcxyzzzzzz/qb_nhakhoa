@@ -31,7 +31,7 @@ namespace TrangWebBTNhom.Controllers
 				String.Join(", ",db.Categories.Where(b=>db.News_Category.Where(d=>d.NewId==i.Id).Select(d=>d.CategoryId).Contains(b.Id)).Select(b=>b.Name).ToArray()),
 				i.Description,
 				i.Id.ToString()
-			}).ToList();
+			}).ToList(); 
 			ViewBag.News = news;
 			return View();
         }
